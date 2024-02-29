@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(fondo.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+form{
+    background-color: antiquewhite;
+    padding: 50px;
+    width: 420px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+form h2{
+    font-size: 30px;
+    color: rgb(35, 26, 15);
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+form h3{
+    background: linear-gradient(
+        90deg,
+        rgb(236, 230, 234) 0%,
+        rgb(236, 162, 105) 5%
+    );
+    margin-bottom: 45px; 
+    color: rgb(11, 11, 6);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+
+
+.btn-1{
+    background-color: chartreuse;
+    border: 0px;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    
+}
+.btn-2{
+    background-color: orangered;
+    border: 0px;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.input-container{
+    position: relative;
+}
+
+.input-container>i{
+    padding: 17px 15px 17px 65px;
+    width: 100%;
+    border-radius: 20px;
+    background: linear-gradient(
+        90deg,
+        rgba(153,26,123,1) 0%,
+        rgba(117,30,156,1) 50%
+    );
+    color: ghostwhite;
+    position: absolute;
+    font-size: 20px;
+    
+}
+
+.input-container>textarea{
+    padding: 0px 0px 17px 65px;
+    border-radius: 15px;
+    font-size: 16px;
+    margin-bottom: 0px;
+    background: transparent;
+    border: 2px solid #cbcbcb;
+    color: #ffffff;
+}
+
+.input-container>input{
+    padding: 17px 15px 17px 65px;
+    width: 100%;
+    margin-bottom: 25px;
+    border-radius: 35px;
+    background-color: transparent;
+    border: 2px solid #cbcbcb;
+    font-size: 16px;
+    outline: none;
+    color: #1e1e1e;
+}
+
+::placeholder{
+    color: #A0A0A0;
+    font-size: 16px;
+}
+
+
+
+form b{
+    background-color: lawngreen;
+    margin-bottom: 45px; 
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    font-size: 20px;
+    display: block;
+}
+
+.input-container2>a{
+    background-color: lawngreen;
+    margin-bottom: 35px; 
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    font-size: 20px;
+    display: block;
+    text-decoration: none;
+}
+
+.input-container3>a{
+    padding: 0%;
+    background-color: orangered;
+    margin-bottom: 5px; 
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    font-size: 20px;
+    display: block;
+    text-decoration: none;
+}
+.btn{
+    background: linear-gradient(
+        90deg,
+        rgba(153,26,123,1) 0%,
+        rgba(117,30,156,1) 50%
+    );
+    padding: 15px 80px;
+    border: 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    border-radius: 25px;
+    color: #fcfef7;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.success{
+    position: absolute;
+    top: 50px;
+    color: #00a735;
+    font-size: 18px;
+}
+
+.error{
+    position: absolute;
+    top: 50px;
+    color: #e02d00;
+    font-size: 18px;
+}
+
+.temporizador{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.temporizador .bloque{
+    margin: 0px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.temporizador .bloque div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        90deg,
+        rgba(153,26,123,1) 0%,
+        rgba(117,30,156,1) 50%
+    );
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    width: 100px;
+    height: 70px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.cont-temporizador .bloque div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(80,80,80);
+    box-shadow: 0px 0px 6px 2px #727272 inset;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    width: 100px;
+    height: 70px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.cont-temporizador .bloque p{
+    border-radius: 5px;
+}
+
+@media(max-width:991px){
+
+    body{
+        padding: 30px;
+    }
+
+    form{
+        width: 340px;
+    }
+}
