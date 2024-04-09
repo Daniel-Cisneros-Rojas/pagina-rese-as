@@ -104,7 +104,7 @@ $mail = new PHPMailer(true);
     <input class="controls" type="text" name="codigo" id="codigo" placeholder="Ingrese su codigo" required="" pattern="[0-9]+">
     <input type="submit" name="send" class="btn" value="Confirmar">
 
-<h3>codigo: <?php echo $_SESSION['codigo'];  ;?></h3>
+
 
     <script src="funciones/contador.js"></script>
     </form>

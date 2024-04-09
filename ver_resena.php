@@ -33,14 +33,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="estilo/style3.css">
+    <script src="https://kit.fontawesome.com/fee347bc49.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <form class="form-register" method="post">
-    <h2><?php echo $titulo;?></h2>
-    <h2>creada por:<?php echo $creador;?></h2>
-    <h2><?php echo $opinion;?></h2>
-    <h2>calificacion: <?php echo $calificacion;?></h2>
-    <img src="data:image/jpg;base64,<?php echo base64_encode($imagen)?>" alt="">
+    <div class="scroll">
+
+    
+    <div class="resena-view">
+    <div class="view">
+    <h3><?php echo $titulo;?></h3>
+    <h2>calificacion:</h2>
+    <div class="stars">
+        <?php
+        for($i=1;$i<6;$i++)
+        {
+            if($i<=$calificacion)
+            {
+                ?>
+                <i class="fas fa-star"></i>
+                <?php
+            }
+            else
+            {
+                ?>
+                <i class="fa-regular fa-star"></i>
+                <?php
+            }
+            
+        }
+        ?>
+    
+    </div>
+    
+    <div class="creador">creada por:<?php echo $creador;?></div>
+    <div class="opinion"><?php echo $opinion;?></div>
+    
+    
+    <img src="data:image/jpg;base64,<?php echo base64_encode($imagen)?>" alt="" width="300" height="350">
     <h2>Comentarios</h2>
     
     <?php
@@ -51,15 +80,19 @@
         $comentario=$row['comentario'];
         $creador_comentario=$row['usuario_creador'];
         ?>
-        <h><?php echo $creador_comentario;?> : <?php echo $comentario;?></h>
+        <div class="comentario"><?php echo $creador_comentario;?> : <?php echo $comentario;?></div>
         <br>
         <?php
     }
     ?>
-    <input type="submit" name="reg" class="botons">
-    <input type="text" name="comentario" id="comentario" required="">
+    <form class="form-register" method="post">
+    <input type="text" name="comentario" id="comentario" required="" class="txtcom" placeholder="Escribe aqui">
+    <input type="submit" name="reg" class="botons" value="comentar">
     </form>
 
+    </div>
+    </div>
+    </div>
 <?php
     include("funciones/comentar.php");
 ?> 

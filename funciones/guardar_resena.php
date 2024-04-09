@@ -2,13 +2,13 @@
 include("conexion.php");
 if(isset($_POST['reg']))
 {
-    if(strlen($_POST['titulo'])>=1 && strlen($_POST['opinion'])>=1&& strlen($_POST['calificacion'])>=1)
+    if(strlen($_POST['titulo'])>=1 && strlen($_POST['opinion'])>=1)
     {
         session_start();
         $creador=$_SESSION['usuario'];
         $titulo=trim($_POST['titulo']);
         $opinion=trim($_POST['opinion']);
-        $calificacion=trim($_POST['calificacion']);
+        $calificacion=trim($_POST['rate']);
         $imagen=addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
 
 

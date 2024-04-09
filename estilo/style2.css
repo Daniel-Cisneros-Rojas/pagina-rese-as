@@ -15,6 +15,80 @@ body{
     min-height: 100vh;
 }
 
+.rating h3{
+    position: relative;
+    
+    
+}
+.archivo{
+   display: none; 
+}
+.archivolabel{
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    background: #c0392b;
+    text-align: center;
+    padding: 15px 40px;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    user-select: none;
+    cursor: pointer;
+    box-shadow: 5px 15px 25px rgba(0,0,0,0.35);
+    border-radius: 3px;
+}
+
+.archivolabel:hover{
+    background: slateblue;
+}
+
+label i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+label:active{
+    transform: scale(0.9);
+}
+.form-register .rating{
+    position: relative;
+    align-items: center;
+    display: inline-block;
+}
+.rating:not(:checked)>input{
+    position: absolute;
+    appearance: none;
+    justify-content: center;
+}
+
+.rating:not(:checked)>label{
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    color: #666;
+}
+
+.rating:not(:checked)>label::before{
+    content: '★';
+}
+
+.rating>input:checked + label:hover,
+.rating>input:checked + label:hover ~ label,
+.rating>input:checked ~ label:hover,
+.rating>input:checked ~ label:hover ~ label,
+.rating>label:hover ~ input:checked ~ label{
+    color: #e58e09;
+}
+
+.rating:not(:checked)>label:hover,
+.rating:not(:checked)>label:hover~label{
+    color: #ff9e0b;
+}
+
+.rating>input:checked~label{
+    color: #ffa723;
+}
+
 form{
     background-color: antiquewhite;
     padding: 50px;
@@ -93,13 +167,15 @@ form h2{
 }
 
 .input-container>textarea{
-    padding: 0px 0px 17px 65px;
-    border-radius: 15px;
     font-size: 16px;
-    margin-bottom: 0px;
-    background: transparent;
-    border: 2px solid #cbcbcb;
     color: white;
+    width: 100%;
+ background: #24303c;
+ padding: 10px;
+ border-radius: 4px;
+ margin-bottom: 16px;
+ border: 1px solid #1f53c5;
+ font-family: 'calibri';
     
 }
 
