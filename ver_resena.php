@@ -86,15 +86,25 @@
     }
     ?>
     <form class="form-register" method="post">
-    <input type="text" name="comentario" id="comentario" required="" class="txtcom" placeholder="Escribe aqui">
+    <input type="text" name="comentario" id="comentario" class="txtcom" placeholder="Escribe aqui">
     <input type="submit" name="reg" class="botons" value="comentar">
+    <?php
+    if($creador==$_SESSION['usuario'])
+    {
+        ?>
+         <input type="submit" name="borrar" class="botons" value="Borrar reseña">
+        <?php
+    }
+    ?>
     </form>
-
+    
+  
     </div>
     </div>
     </div>
 <?php
     include("funciones/comentar.php");
+    include("funciones/borrar.php");
 ?> 
     
 </body>
