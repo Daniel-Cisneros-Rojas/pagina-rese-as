@@ -7,8 +7,8 @@ include("funciones/conexion.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <link rel="stylesheet" href="estilo/style3.css">
+    <title>Resenas - Inicio</title>
+    <link rel="stylesheet" href="estilo/main.css">
     <script src="https://kit.fontawesome.com/fee347bc49.js" crossorigin="anonymous"></script>
    
 </head>
@@ -65,7 +65,7 @@ include("funciones/conexion.php");
     }
 ?>
             <form action="" method="post" id="filtro">
-                <li><input type="text" name="filtro" id="filtro" placeholder="titulo a buscar" form="filtro" class="filtrostxt" ></li>
+                <li><input type="text" name="filtro" id="filtro" placeholder="Buscar titulo..." form="filtro" class="filtrostxt" ></li>
                 <li><input type="submit" name="reg" value="Filtrar" form="filtro" class="filtrosbtn" ></li>
             </form>
       </ul>
@@ -93,7 +93,7 @@ include("funciones/conexion.php");
             {
                 ?>
                 <div class="resena" data-name="p-1">
-                <img src="data:image/jpg;base64,<?php echo base64_encode($imagen)?>" alt="" width="300" height="350">
+                <div class="img-wrapper"><img src="data:image/jpg;base64,<?php echo base64_encode($imagen)?>" alt=""></div>
                 <h3><?php echo $titulo;?></h3>
                 <div class="creador">by :<?php echo $creador;?></div>
                 <div class="stars">
@@ -126,7 +126,7 @@ include("funciones/conexion.php");
             {
                 ?>
                 <div class="resena" data-name="p-1">
-                <img src="data:image/jpg;base64,<?php echo base64_encode($imagen)?>" alt="" width="300" height="350">
+                <div class="img-wrapper"><img src="data:image/jpg;base64,<?php echo base64_encode($imagen)?>" alt=""></div>
                 <h3><?php echo $titulo;?></h3>
                 <div class="creador">by :<?php echo $creador;?></div>
                 <div class="stars">

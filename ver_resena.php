@@ -31,8 +31,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="estilo/style3.css">
+    <title><?php echo $titulo; ?> - Resenas</title>
+    <link rel="stylesheet" href="estilo/main.css">
     <script src="https://kit.fontawesome.com/fee347bc49.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -92,7 +92,7 @@
     if($creador==$_SESSION['usuario'])
     {
         ?>
-         <input type="submit" name="borrar" class="botons" value="Borrar reseña">
+         <input type="submit" name="borrar" class="botons btn-danger" value="Borrar reseña">
         <?php
     }
     ?>

@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background: #F7F0E6;
+    min-height: 100vh;
+}
+
+/* ─── Header ─── */
+header{
+    background: linear-gradient(135deg, #D4A574 0%, #C4956A 100%);
+    padding: 15px 5%;
+    box-shadow: 0 4px 15px rgba(212, 165, 116, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+h1{
+    color: #FFFFFF;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+ul li{
+    display: inline-block;
+    padding: 5px 8px;
+}
+
+form{
+    display: inline-block;
+    padding: 0 5px;
+}
+
+/* ─── Navigation Links ─── */
+a{
+    background: #FFFFFF;
+    color: #5D4E37;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(93, 78, 55, 0.1);
+    transition: all 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+a:active{
+    transform: scale(0.95);
+}
+
+a:hover{
+    background: #93C572;
+    color: #FFFFFF;
+    box-shadow: 0 4px 15px rgba(147, 197, 114, 0.4);
+    transform: translateY(-2px);
+}
+
+/* ─── Filter ─── */
+.filtrosbtn{
+    padding: 8px 20px;
+    background: #FFFFFF;
+    color: #5D4E37;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filtrosbtn:hover{
+    background: #93C572;
+    color: #FFFFFF;
+    box-shadow: 0 4px 15px rgba(147, 197, 114, 0.4);
+}
+
+.filtrostxt{
+    padding: 10px 20px;
+    width: 200px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.2);
+    border: 2px solid rgba(255,255,255,0.3);
+    font-size: 13px;
+    outline: none;
+    color: #FFFFFF;
+    transition: all 0.2s;
+}
+
+.filtrostxt::placeholder{
+    color: rgba(255,255,255,0.7);
+}
+
+.filtrostxt:focus{
+    background: rgba(255,255,255,0.3);
+    border-color: rgba(255,255,255,0.5);
+}
+
+/* ─── Reviews Grid ─── */
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 3rem;
+}
+
+.container .resenas-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: 2.5rem;
+}
+
+.container .resenas-container .resena{
+    text-align: center;
+    padding: 3rem 2rem 2rem;
+    background: #FFFFFF;
+    box-shadow: 0 8px 25px rgba(93, 78, 55, 0.1);
+    outline: 0.2rem solid #E8D5C0;
+    outline-offset: -1rem;
+    border-radius: 16px;
+    transition: all 0.3s;
+}
+
+.container .resenas-container .resena:hover{
+    outline: 0.3rem solid #93C572;
+    outline-offset: 0;
+    box-shadow: 0 12px 35px rgba(147, 197, 114, 0.2);
+    transform: translateY(-4px);
+}
+
+.container .resenas-container .resena .img-wrapper{
+    height: 22rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FAF7F2;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.container .resenas-container .resena .img-wrapper img{
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 0;
+}
+
+.container .resenas-container .resena:hover img{
+    transform: scale(0.95);
+}
+
+.container .resenas-container .resena h3{
+    padding: 1.2rem 0 0.5rem;
+    font-size: 2.2rem;
+    color: #5D4E37;
+    font-weight: 700;
+}
+
+.container .resenas-container .resena:hover h3{
+    color: #7AB356;
+}
+
+.container .resenas-container .resena .creador{
+    font-size: 1.4rem;
+    color: #B8A89A;
+    margin-bottom: 0.5rem;
+}
+
+.container .resenas-container .resena .creador::before{
+    content: 'by ';
+    font-style: italic;
+}
+
+/* ─── Stars ─── */
+.container .resenas-container .stars{
+    font-size: 1.7rem;
+    color: #93C572;
+    margin: 0.8rem 0;
+}
+
+.container .resenas-container .stars i{
+    margin: 0 1px;
+}
+
+.resena-view .view .stars{
+    padding: 1rem 0;
+}
+
+.resena-view .view .stars i{
+    font-size: 2rem;
+    color: #93C572;
+    margin: 0 2px;
+}
+
+/* ─── Review View Modal ─── */
+.resena-view{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(93, 78, 55, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+.resena-view .view{
+    display: inline-block;
+    padding: 40px;
+    width: 620px;
+    max-height: 85vh;
+    text-align: center;
+    background: #FFFFFF;
+    position: relative;
+    margin: 2rem;
+    overflow-y: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(93, 78, 55, 0.3);
+}
+
+.resena-view .view::-webkit-scrollbar{
+    width: 8px;
+}
+
+.resena-view .view::-webkit-scrollbar-track{
+    background: #F7F0E6;
+    border-radius: 4px;
+}
+
+.resena-view .view::-webkit-scrollbar-thumb{
+    background: linear-gradient(135deg, #D4A574 0%, #C4956A 100%);
+    border-radius: 4px;
+}
+
+.resena-view .view img{
+    height: 26rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 10px 0;
+    box-shadow: 0 4px 15px rgba(93, 78, 55, 0.15);
+}
+
+.resena-view .view h3{
+    color: #5D4E37;
+    padding: 0.5rem 0;
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.resena-view .view h2{
+    color: #5D4E37;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.resena-view .view .opinion{
+    font-size: 1.8rem;
+    color: #5D4E37;
+    line-height: 1.6;
+    padding: 1rem 0;
+    text-transform: none;
+}
+
+.resena-view .view .creador{
+    font-size: 1.5rem;
+    color: #B8A89A;
+    margin: 0.5rem 0;
+}
+
+/* ─── Comments ─── */
+.resena-view .view .comentario{
+    background: #FAF7F2;
+    text-align: left;
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin: 8px 0;
+    font-size: 1.5rem;
+    color: #5D4E37;
+    border: 1px solid #E8D5C0;
+    text-transform: none;
+}
+
+.resena-view .view .comentario:first-of-type{
+    margin-top: 15px;
+}
+
+/* ─── Review View Buttons ─── */
+.resena-view .view .botons{
+    background: linear-gradient(135deg, #93C572 0%, #A8D88A 100%);
+    color: #FFFFFF;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 15px rgba(147, 197, 114, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 5px;
+}
+
+.resena-view .view .botons:hover{
+    background: linear-gradient(135deg, #7AB356 0%, #93C572 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(147, 197, 114, 0.4);
+}
+
+.resena-view .view .botons.btn-danger{
+    background: linear-gradient(135deg, #D47474 0%, #C06060 100%);
+    box-shadow: 0 4px 15px rgba(212, 116, 116, 0.3);
+}
+
+.resena-view .view .botons.btn-danger:hover{
+    background: linear-gradient(135deg, #C06060 0%, #A84C4C 100%);
+}
+
+.resena-view .view .txtcom{
+    color: #5D4E37;
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #E8D5C0;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    background: #FAF7F2;
+    outline: none;
+    transition: border-color 0.2s;
+    text-transform: none;
+}
+
+.resena-view .view .txtcom:focus{
+    border-color: #93C572;
+}
+
+.resena-view .view .form-register{
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+/* ─── "Ver reseña" Link ─── */
+.container .resenas-container .resena p a{
+    background: linear-gradient(135deg, #D4A574 0%, #C4956A 100%);
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(212, 165, 116, 0.3);
+    transition: all 0.2s;
+}
+
+.container .resenas-container .resena p a:hover{
+    background: linear-gradient(135deg, #93C572 0%, #A8D88A 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(147, 197, 114, 0.4);
+}
+
+/* ─── Responsive ─── */
+@media(max-width: 768px){
+    html{
+        font-size: 55%;
+    }
+
+    nav{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    ul li{
+        display: block;
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    .filtrostxt{
+        width: 100%;
+    }
+
+    .resena-view .view{
+        width: 95%;
+        padding: 25px;
+        margin: 1rem;
+    }
+
+    .container .resenas-container{
+        grid-template-columns: 1fr;
+    }
+
+    .resena-view .view .form-register{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,487 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #F5E6D3 0%, #E8D5C0 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* ─── Form Register (login / registro / crear_resena / verify) ─── */
+.form-register{
+    width: 440px;
+    background: #FFFFFF;
+    padding: 35px 35px;
+    margin: auto;
+    border-radius: 16px;
+    color: #5D4E37;
+    box-shadow: 0 8px 30px rgba(93, 78, 55, 0.15);
+    border: 1px solid #E8D5C0;
+    text-align: center;
+}
+
+.form-register h4{
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #5D4E37;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.form-register p{
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 40px;
+    color: #5D4E37;
+}
+
+.form-register a{
+    color: #7AB356;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    display: inline;
+    margin: 0;
+}
+
+.form-register a:hover{
+    color: #93C572;
+    text-decoration: underline;
+}
+
+.form-register .botons{
+    width: 100%;
+    background: linear-gradient(135deg, #93C572 0%, #A8D88A 100%);
+    border: none;
+    padding: 14px;
+    color: #FFFFFF;
+    margin: 20px 0 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 0.2s;
+    box-shadow: 0 4px 15px rgba(147, 197, 114, 0.3);
+}
+
+.form-register .botons:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(147, 197, 114, 0.4);
+}
+
+/* ─── Base Form ─── */
+form{
+    background-color: #FFFFFF;
+    padding: 40px 50px;
+    width: 420px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(93, 78, 55, 0.15);
+    border-radius: 16px;
+    border: 1px solid #E8D5C0;
+}
+
+form h2{
+    font-size: 25px;
+    color: #5D4E37;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+form h4{
+    color: #5D4E37;
+    font-size: 16px;
+    margin: 15px 0;
+    font-weight: 400;
+}
+
+/* ─── Inputs ─── */
+.controls{
+    width: 100%;
+    background: #FAF7F2;
+    padding: 14px 18px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    border: 2px solid #E8D5C0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color: #5D4E37;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.controls:focus{
+    border-color: #93C572;
+}
+
+.input-container{
+    position: relative;
+}
+
+.input-container>i{
+    padding: 14px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #D4A574 0%, #C4956A 100%);
+    color: #FFFFFF;
+    position: absolute;
+    font-size: 18px;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-container>input{
+    padding: 17px 15px 17px 65px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 35px;
+    background-color: #FAF7F2;
+    border: 2px solid #E8D5C0;
+    font-size: 15px;
+    outline: none;
+    color: #5D4E37;
+    transition: border-color 0.2s;
+}
+
+.input-container>input:focus{
+    border-color: #93C572;
+}
+
+.input-container>textarea{
+    font-size: 15px;
+    color: #5D4E37;
+    width: 100%;
+    background: #FAF7F2;
+    padding: 15px 15px 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    border: 2px solid #E8D5C0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: none;
+    transition: border-color 0.2s;
+    resize: vertical;
+}
+
+.input-container>textarea:focus{
+    border-color: #93C572;
+}
+
+::placeholder{
+    color: #B8A89A;
+    font-size: 15px;
+}
+
+/* ─── Buttons ─── */
+.btn{
+    background: linear-gradient(135deg, #93C572 0%, #A8D88A 100%);
+    padding: 14px 60px;
+    border: 0;
+    box-shadow: 0 4px 15px rgba(147, 197, 114, 0.3);
+    border-radius: 25px;
+    color: #FFFFFF;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(147, 197, 114, 0.4);
+}
+
+.btn-1{
+    background-color: #93C572;
+    border: 0px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-1:hover{
+    background-color: #7AB356;
+    transform: translateY(-1px);
+}
+
+.btn-2{
+    background-color: #D47474;
+    border: 0px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-2:hover{
+    background-color: #C06060;
+    transform: translateY(-1px);
+}
+
+/* ─── Star Rating ─── */
+.rating-wrapper{
+    margin: 15px 0;
+}
+
+.rating-wrapper p{
+    color: #5D4E37;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.rating{
+    position: relative;
+    display: inline-flex;
+    flex-direction: row-reverse;
+}
+
+.rating input{
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.rating label{
+    cursor: pointer;
+    font-size: 35px;
+    color: #D8C9B8;
+    transition: color 0.15s;
+    padding: 0 3px;
+}
+
+.rating label::before{
+    content: '\2605';
+}
+
+.rating input:checked ~ label{
+    color: #93C572;
+}
+
+.rating label:hover,
+.rating label:hover ~ label{
+    color: #A8D88A;
+}
+
+.rating input:checked + label:hover,
+.rating input:checked + label:hover ~ label,
+.rating input:checked ~ label:hover,
+.rating input:checked ~ label:hover ~ label,
+.rating label:hover ~ input:checked ~ label{
+    color: #7AB356;
+}
+
+/* ─── File Upload ─── */
+.file-upload-wrapper{
+    margin: 20px 0;
+    text-align: center;
+}
+
+.file-upload-wrapper p{
+    color: #5D4E37;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.archivo{
+    display: none;
+}
+
+.archivolabel{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #D4A574 0%, #C4956A 100%);
+    text-align: center;
+    padding: 14px 35px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    user-select: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(212, 165, 116, 0.35);
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.archivolabel:hover{
+    background: linear-gradient(135deg, #C4956A 0%, #B8885C 100%);
+    transform: translateY(-2px);
+}
+
+.archivolabel i{
+    font-size: 18px;
+}
+
+label:active{
+    transform: scale(0.95);
+}
+
+/* ─── Image Preview ─── */
+.preview-container{
+    margin: 15px auto;
+    max-width: 220px;
+    max-height: 200px;
+    display: none;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(93, 78, 55, 0.15);
+    border: 3px solid #E8D5C0;
+}
+
+.preview-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ─── Timer ─── */
+.temporizador{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 15px;
+}
+
+.temporizador .bloque{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.temporizador .bloque div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #D4A574 0%, #C4956A 100%);
+    box-shadow: 0 4px 15px rgba(212, 165, 116, 0.3);
+    color: #FFFFFF;
+    font-size: 40px;
+    font-weight: bold;
+    width: 100px;
+    height: 70px;
+    margin-bottom: 8px;
+    border-radius: 12px;
+}
+
+.temporizador .bloque p{
+    color: #5D4E37;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ─── Status Messages ─── */
+.ok{
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 14px 30px;
+    background: linear-gradient(135deg, #93C572 0%, #A8D88A 100%);
+    color: #FFFFFF;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 4px 20px rgba(147, 197, 114, 0.4);
+    z-index: 1000;
+    animation: slideDown 0.3s ease;
+}
+
+.bad{
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 14px 30px;
+    background: linear-gradient(135deg, #D47474 0%, #C06060 100%);
+    color: #FFFFFF;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 4px 20px rgba(212, 116, 116, 0.4);
+    z-index: 1000;
+    animation: slideDown 0.3s ease;
+}
+
+.success{
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 14px 30px;
+    background: linear-gradient(135deg, #93C572 0%, #A8D88A 100%);
+    color: #FFFFFF;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 4px 20px rgba(147, 197, 114, 0.4);
+    z-index: 1000;
+    animation: slideDown 0.3s ease;
+}
+
+.error{
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 14px 30px;
+    background: linear-gradient(135deg, #D47474 0%, #C06060 100%);
+    color: #FFFFFF;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 4px 20px rgba(212, 116, 116, 0.4);
+    z-index: 1000;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown{
+    from{
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* ─── Responsive ─── */
+@media(max-width: 991px){
+    body{
+        padding: 20px;
+    }
+
+    form{
+        width: 100%;
+        max-width: 400px;
+        padding: 30px;
+    }
+
+    .form-register{
+        width: 100%;
+        max-width: 400px;
+    }
+}
